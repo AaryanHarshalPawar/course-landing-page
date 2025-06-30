@@ -3,88 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aaryan Pawar | Online Courses</title>
+  <title>Yoga Nidra Relaxation Course</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <!-- Navigation -->
   <nav>
     <div class="container nav-container">
-      <a href="#" class="logo">Aaryan Pawar</a>
+      <div class="logo">Yoga Nidra Bliss</div>
       <ul class="nav-links">
-        <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#courses">Courses</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" id="hero">
+  <section class="hero" id="home">
     <div class="container hero-content">
-      <h1>Master Your Skills with Guided Online Courses</h1>
-      <p>Learn at your pace. Practical, beginner-friendly lessons designed for YouTube learners and beyond.</p>
-      <a href="#courses" class="cta-btn">Explore Courses</a>
+      <div>
+        <h1>Find Deep Relaxation with Yoga Nidra</h1>
+        <p>Let go of stress and reconnect with your inner calm through guided Yoga Nidra sessions designed for all levels.</p>
+        <a href="#courses" class="cta-btn">Explore Courses</a>
+      </div>
     </div>
   </section>
 
   <!-- About Section -->
   <section class="about" id="about">
     <div class="container about-container">
-      <img src="profile.jpg" alt="Aaryan Pawar" class="about-img">
-      <div class="about-text">
-        <h2>Meet Aaryan Pawar</h2>
-        <p>I'm passionate about simplifying learning. Through these courses and my YouTube channel, I help people like you grow their skills without overwhelm.</p>
-        <a href="https://youtube.com/@yourchannel" target="_blank" class="cta-btn">Visit YouTube</a>
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Yoga Nidra" class="about-img">
+      <div>
+        <h2>About Yoga Nidra</h2>
+        <p>Yoga Nidra is a powerful relaxation technique that guides you into a state of deep rest and renewal. Our courses are crafted to help you relieve stress, improve sleep, and find lasting peace in mind and body.</p>
       </div>
     </div>
   </section>
 
-  <!-- Courses Section -->
+  <!-- Courses Carousel -->
   <section class="courses" id="courses">
     <div class="container">
-      <h2>Featured Courses</h2>
-      <div class="carousel-container">
-        <button class="carousel-btn" id="prevBtn">&#10094;</button>
-        <div class="carousel">
-          <div class="carousel-card active">
-            <img src="course1.jpg" alt="Course 1">
-            <h3>Yoga Nidra Guide</h3>
-            <p>Experience deep relaxation and mindfulness with guided sessions.</p>
-            <a href="#" class="enroll-btn">Buy Now</a>
+      <h2>Our Courses</h2>
+      <!-- Carousel Start -->
+      <div class="carousel">
+        <input type="radio" name="carousel" id="carousel1" checked>
+        <input type="radio" name="carousel" id="carousel2">
+        <input type="radio" name="carousel" id="carousel3">
+        <div class="carousel-items">
+          <div class="carousel-item" id="item1">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Beginner Yoga Nidra">
+            <h3>Beginner's Yoga Nidra</h3>
+            <p>Gentle sessions introducing the basics of Yoga Nidra. Perfect for absolute beginners.</p>
+            <!-- PAYMENT BUTTON EXAMPLE -->
+            <a href="https://your-payment-link.com" class="enroll-btn" target="_blank">Enroll Now</a>
           </div>
-          <div class="carousel-card">
-            <img src="course2.jpg" alt="Course 2">
-            <h3>Self Growth Masterclass</h3>
-            <p>Unlock your potential and cultivate better habits for life success.</p>
-            <a href="#" class="enroll-btn">Buy Now</a>
+          <div class="carousel-item" id="item2">
+            <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80" alt="Deep Relaxation">
+            <h3>Deep Relaxation</h3>
+            <p>Intermediate to advanced sessions for profound mental and physical relaxation.</p>
+            <a href="https://your-payment-link.com" class="enroll-btn" target="_blank">Enroll Now</a>
           </div>
-          <div class="carousel-card">
-            <img src="course3.jpg" alt="Course 3">
-            <h3>Focus & Productivity</h3>
-            <p>Learn proven techniques to boost your focus and achieve your goals.</p>
-            <a href="#" class="enroll-btn">Buy Now</a>
+          <div class="carousel-item" id="item3">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Sleep Yoga Nidra">
+            <h3>Yoga Nidra for Sleep</h3>
+            <p>Specialized sessions designed to help you fall asleep easily and wake up refreshed.</p>
+            <a href="https://your-payment-link.com" class="enroll-btn" target="_blank">Enroll Now</a>
           </div>
         </div>
-        <button class="carousel-btn" id="nextBtn">&#10095;</button>
+        <!-- Carousel Controls -->
+        <div class="carousel-controls">
+          <label for="carousel1"></label>
+          <label for="carousel2"></label>
+          <label for="carousel3"></label>
+        </div>
       </div>
+      <!-- Carousel End -->
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials">
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
     <div class="container">
-      <h2>Student Feedback</h2>
+      <h2>What Our Students Say</h2>
       <div class="testimonial-list">
         <div class="testimonial">
-          <p>"The Yoga Nidra course was a game-changer for my stress levels. Highly recommended!"</p>
+          <p>"I never felt so relaxed after a long day. These Yoga Nidra sessions are magical!"</p>
           <span>- Priya S.</span>
         </div>
         <div class="testimonial">
-          <p>"Aaryan explains concepts so clearly, I finally feel confident with my productivity."</p>
-          <span>- Rahul M.</span>
+          <p>"The guided meditations helped me sleep better and feel less anxious."</p>
+          <span>- Rahul K.</span>
+        </div>
+        <div class="testimonial">
+          <p>"Beautifully explained and very calming. Highly recommend to anyone seeking inner peace."</p>
+          <span>- Ananya M.</span>
         </div>
       </div>
     </div>
@@ -92,22 +107,18 @@
 
   <!-- Contact Section -->
   <section class="contact" id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Have questions? Email <a href="mailto:aaryan@email.com">aaryan@email.com</a> or connect on YouTube.</p>
-      <a href="https://youtube.com/@yourchannel" target="_blank" class="social-link">YouTube</a>
+    <div class="container contact-container">
+      <h2>Contact & Social</h2>
+      <p>Have questions? Email <a href="mailto:youremail@example.com">youremail@example.com</a> or connect via social:</p>
+      <a href="https://youtube.com/yourchannel" target="_blank" class="social-link">YouTube</a>
+      <!-- Add more social links if you want -->
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Aaryan Pawar | All rights reserved</p>
+      <p>&copy; 2025 Yoga Nidra Bliss. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- Optional: Dark Mode Toggle & Carousel Script -->
-  <button id="darkModeToggle">🌙</button>
-  <script src="main.js"></script>
 </body>
 </html>
