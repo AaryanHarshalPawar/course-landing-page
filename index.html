@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>[Your Brand] | Online Courses</title>
+  <title>Aaryan Pawar | Online Courses</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="container nav-flex">
-      <a href="#" class="logo">
-        <img src="temp_logo.png" alt="Logo" />
-        <span>[Your Brand]</span>
-      </a>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-container">
+      <a href="#" class="logo">Aaryan Pawar</a>
       <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
+        <li><a href="#hero" class="active">Home</a></li>
         <li><a href="#courses">Courses</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -26,13 +24,20 @@
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="container hero-content">
-      <div class="hero-text">
-        <h1>Learn, Grow, and Succeed Online</h1>
-        <p>Courses crafted for YouTube learners – take the next step and master your skills with guided lessons and community support.</p>
-        <a href="#courses" class="cta-btn">Browse Courses</a>
-      </div>
-      <div class="hero-image">
-        <img src="temp_logo.png" alt="Hero Image" />
+      <h1>Master Your Skills with Guided Online Courses</h1>
+      <p>Learn at your pace. Practical, beginner-friendly lessons designed for YouTube learners and beyond.</p>
+      <a href="#courses" class="cta-btn">Explore Courses</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container about-container">
+      <img src="profile.jpg" alt="Aaryan Pawar" class="about-img">
+      <div class="about-text">
+        <h2>Meet Aaryan Pawar</h2>
+        <p>I'm passionate about simplifying learning. Through these courses and my YouTube channel, I help people like you grow their skills without overwhelm.</p>
+        <a href="https://youtube.com/@yourchannel" target="_blank" class="cta-btn">Visit YouTube</a>
       </div>
     </div>
   </section>
@@ -41,55 +46,45 @@
   <section class="courses" id="courses">
     <div class="container">
       <h2>Featured Courses</h2>
-      <div class="course-cards">
-        <div class="course-card">
-          <img src="temp_logo.png" alt="Course 1">
-          <h3>Beginner's Guide</h3>
-          <p>Start from scratch and build your foundation with step-by-step lessons.</p>
-          <a href="#" class="enroll-btn">Enroll Now</a>
+      <div class="carousel-container">
+        <button class="carousel-btn" id="prevBtn">&#10094;</button>
+        <div class="carousel">
+          <div class="carousel-card active">
+            <img src="course1.jpg" alt="Course 1">
+            <h3>Yoga Nidra Guide</h3>
+            <p>Experience deep relaxation and mindfulness with guided sessions.</p>
+            <a href="#" class="enroll-btn">Buy Now</a>
+          </div>
+          <div class="carousel-card">
+            <img src="course2.jpg" alt="Course 2">
+            <h3>Self Growth Masterclass</h3>
+            <p>Unlock your potential and cultivate better habits for life success.</p>
+            <a href="#" class="enroll-btn">Buy Now</a>
+          </div>
+          <div class="carousel-card">
+            <img src="course3.jpg" alt="Course 3">
+            <h3>Focus & Productivity</h3>
+            <p>Learn proven techniques to boost your focus and achieve your goals.</p>
+            <a href="#" class="enroll-btn">Buy Now</a>
+          </div>
         </div>
-        <div class="course-card">
-          <img src="temp_logo.png" alt="Course 2">
-          <h3>Advanced Techniques</h3>
-          <p>Take your skills to the next level with advanced strategies and tips.</p>
-          <a href="#" class="enroll-btn">Enroll Now</a>
-        </div>
-        <div class="course-card">
-          <img src="temp_logo.png" alt="Course 3">
-          <h3>Special Masterclass</h3>
-          <p>Exclusive masterclass for those who want to stand out from the crowd.</p>
-          <a href="#" class="enroll-btn">Enroll Now</a>
-        </div>
+        <button class="carousel-btn" id="nextBtn">&#10095;</button>
       </div>
     </div>
   </section>
 
-  <!-- About/Instructor Section -->
-  <section class="about" id="about">
-    <div class="container about-flex">
-      <div class="about-img">
-        <img src="temp_logo.png" alt="Instructor">
-      </div>
-      <div class="about-text">
-        <h2>Meet Your Instructor</h2>
-        <p>Hi, I'm [Your Name], a passionate educator with years of experience helping students succeed. My mission is to make quality learning accessible to everyone, starting with the lessons you love on YouTube.</p>
-        <a href="https://youtube.com/[yourchannel]" target="_blank" class="yt-btn">Visit YouTube Channel</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
+  <!-- Testimonials -->
   <section class="testimonials">
     <div class="container">
-      <h2>What Students Say</h2>
+      <h2>Student Feedback</h2>
       <div class="testimonial-list">
         <div class="testimonial">
-          <p>"The best online course experience I've had! The lessons are clear and practical."</p>
-          <span>- Student A</span>
+          <p>"The Yoga Nidra course was a game-changer for my stress levels. Highly recommended!"</p>
+          <span>- Priya S.</span>
         </div>
         <div class="testimonial">
-          <p>"I learned more here than from months of searching on YouTube. Highly recommended!"</p>
-          <span>- Student B</span>
+          <p>"Aaryan explains concepts so clearly, I finally feel confident with my productivity."</p>
+          <span>- Rahul M.</span>
         </div>
       </div>
     </div>
@@ -98,21 +93,21 @@
   <!-- Contact Section -->
   <section class="contact" id="contact">
     <div class="container">
-      <h2>Contact</h2>
-      <p>Questions? Email <a href="mailto:your@email.com">your@email.com</a> or reach out on social:</p>
-      <div class="social-links">
-        <a href="https://youtube.com/[yourchannel]" target="_blank">YouTube</a>
-        <!-- Add more social links if needed -->
-      </div>
+      <h2>Contact Me</h2>
+      <p>Have questions? Email <a href="mailto:aaryan@email.com">aaryan@email.com</a> or connect on YouTube.</p>
+      <a href="https://youtube.com/@yourchannel" target="_blank" class="social-link">YouTube</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 [Your Name] | All rights reserved</p>
+      <p>&copy; 2025 Aaryan Pawar | All rights reserved</p>
     </div>
   </footer>
+
+  <!-- Optional: Dark Mode Toggle & Carousel Script -->
+  <button id="darkModeToggle">🌙</button>
   <script src="main.js"></script>
 </body>
 </html>
