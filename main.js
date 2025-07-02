@@ -1,25 +1,31 @@
-// --- Carousel Logic ---
-const carousel = document.getElementById('carousel');
-const cards = carousel.getElementsByClassName('carousel-card');
-const dotsContainer = document.getElementById('carouselDots');
-const prevBtn = document.getElementById('carouselPrev');
-const nextBtn = document.getElementById('carouselNext');
-let current = 0;
-let autoPlayTimer = null;
-const AUTO_PLAY_INTERVAL = 6000; // ms
-
-function showCard(idx, focus = false) {
-  for (let i = 0; i < cards.length; i++) {
-    cards[i].classList.toggle('active', i === idx);
-    cards[i].setAttribute('aria-hidden', i !== idx);
-    if (dotsContainer.children[i]) {
-      dotsContainer.children[i].classList.toggle('active', i === idx);
+scrollToTopBtn.style.borderRadius = '5px';
+scrollToTopBtn.style.backgroundColor = '#49796b';
+scrollToTopBtn.style.color = '#fff';
+scrollToTopBtn.style.cursor = 'pointer';
+document.body.appendChild(scrollToTopBtn);
+window.addEventListener('scroll', () => {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
     }
-  }
-  if (focus) cards[idx].focus();
-  current = idx;
+});
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+// Form Validation (Assuming you have a form in your HTML)
+const contactForm = document.querySelector('form'); // Update selector based on your form
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        const emailInput = contactForm.querySelector('input[type="email"]');
+        if (!emailInput.value) {
+            e.preventDefault();
+            alert('Please enter your email address.');
+        } else {
+            alert('Thank you for your message!');
+        }
+    });
 }
-
 function nextCard() {
   showCard((current + 1) % cards.length);
 }
