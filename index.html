@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
   <script defer src="main.js"></script>
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -34,8 +36,8 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="about container">
-    <div class="about-container">
+  <section id="about" class="about">
+    <div class="container about-container">
       <img src="logo.png" alt="About Us" class="about-img" />
       <div>
         <h2>About Us</h2>
@@ -45,72 +47,78 @@
   </section>
 
   <!-- Courses Section -->
-  <section id="courses" class="courses container">
-    <h2>Our Courses</h2>
-    <div class="carousel">
-      <!-- Radio inputs for carousel -->
-      <input type="radio" name="carousel" id="carousel1" checked />
-      <input type="radio" name="carousel" id="carousel2" />
-      <input type="radio" name="carousel" id="carousel3" />
+  <section id="courses" class="courses">
+    <div class="container">
+      <h2>Our Courses</h2>
+      <div class="carousel">
+        <!-- Radio inputs for carousel -->
+        <input type="radio" name="carousel" id="carousel1" checked />
+        <input type="radio" name="carousel" id="carousel2" />
+        <input type="radio" name="carousel" id="carousel3" />
 
-      <!-- Carousel items -->
-      <div class="carousel-items">
-        <div class="carousel-item" id="item1">
-          <img src="logo.png" alt="Course 1" />
-          <h3>Course 1</h3>
-          <p>Learn the basics of coding with this beginner-friendly course.</p>
-          <button class="enroll-btn">Enroll Now</button>
+        <!-- Carousel items -->
+        <div class="carousel-items">
+          <div class="carousel-item" id="item1">
+            <img src="logo.png" alt="Course 1" />
+            <h3>Course 1</h3>
+            <p>Learn the basics of coding with this beginner-friendly course.</p>
+            <button class="enroll-btn">Enroll Now</button>
+          </div>
+          <div class="carousel-item" id="item2">
+            <img src="logo.png" alt="Course 2" />
+            <h3>Course 2</h3>
+            <p>Advance your skills with intermediate programming techniques.</p>
+            <button class="enroll-btn">Enroll Now</button>
+          </div>
+          <div class="carousel-item" id="item3">
+            <img src="logo.png" alt="Course 3" />
+            <h3>Course 3</h3>
+            <p>Master expert level development and software architecture.</p>
+            <button class="enroll-btn">Enroll Now</button>
+          </div>
         </div>
-        <div class="carousel-item" id="item2">
-          <img src="logo.png" alt="Course 2" />
-          <h3>Course 2</h3>
-          <p>Advance your skills with intermediate programming techniques.</p>
-          <button class="enroll-btn">Enroll Now</button>
-        </div>
-        <div class="carousel-item" id="item3">
-          <img src="logo.png" alt="Course 3" />
-          <h3>Course 3</h3>
-          <p>Master expert level development and software architecture.</p>
-          <button class="enroll-btn">Enroll Now</button>
-        </div>
-      </div>
 
-      <!-- Carousel Controls -->
-      <div class="carousel-controls">
-        <label for="carousel1"></label>
-        <label for="carousel2"></label>
-        <label for="carousel3"></label>
+        <!-- Carousel Controls -->
+        <div class="carousel-controls">
+          <label for="carousel1"></label>
+          <label for="carousel2"></label>
+          <label for="carousel3"></label>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials container">
-    <h2>What Our Students Say</h2>
-    <div class="testimonial-list">
-      <div class="testimonial">
-        <p>"The courses helped me land my dream job!"</p>
-        <span>- Student A</span>
-      </div>
-      <div class="testimonial">
-        <p>"Instructors are knowledgeable and supportive."</p>
-        <span>- Student B</span>
-      </div>
-      <div class="testimonial">
-        <p>"Flexible learning that fits my busy schedule."</p>
-        <span>- Student C</span>
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>What Our Students Say</h2>
+      <div class="testimonial-list">
+        <div class="testimonial">
+          <p>"The courses helped me land my dream job!"</p>
+          <span>- Student A</span>
+        </div>
+        <div class="testimonial">
+          <p>"Instructors are knowledgeable and supportive."</p>
+          <span>- Student B</span>
+        </div>
+        <div class="testimonial">
+          <p>"Flexible learning that fits my busy schedule."</p>
+          <span>- Student C</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact container">
-    <h2>Contact Us</h2>
-    <form id="contactForm" action="#" method="POST">
-      <input type="email" name="email" placeholder="Your email" required />
-      <button type="submit" class="cta-btn">Send Message</button>
-    </form>
-    <a href="#" class="social-link">Follow us on Social</a>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="contactForm" action="#" method="POST">
+        <input type="email" name="email" placeholder="Your email" required />
+        <button type="submit" class="cta-btn">Send Message</button>
+      </form>
+      <a href="#" class="social-link">Follow us on Social</a>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -119,4 +127,5 @@
   </footer>
 
 </body>
+
 </html>
