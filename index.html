@@ -1,94 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course Landing Page</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <nav>
-    <div class="nav-container">
-      <div class="logo">MyBrand</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="darkModeToggle">🌙</button>
-    </div>
-  </nav>
+<header>
+    <h1>MyBrand</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Testimonials</a>
+        <a href="#">Contact</a>
+    </nav>
+    <button id="theme-toggle">🌙</button>
+</header>
 
-  <section id="home" class="hero">
-    <h1>Welcome to Our Learning Platform</h1>
+<section class="hero">
+    <h2>Welcome to Our Learning Platform</h2>
     <p>Empower yourself with top-notch courses and expert instructors.</p>
-    <a href="#courses" class="btn">Explore Courses</a>
-  </section>
+    <button>Explore Courses</button>
+</section>
 
-  <section id="about" class="card-section">
-    <div class="card-container">
-      <img src="logo.png" alt="About Image">
-      <div>
-        <h2>About Us</h2>
+<section class="about">
+    <img src="https://via.placeholder.com/200x150" alt="About Image">
+    <div>
+        <h3>About Us</h3>
         <p>We provide quality education to help you achieve your goals.</p>
-      </div>
     </div>
-  </section>
+</section>
 
-  <section id="courses" class="carousel-section">
-    <h2>Our Courses</h2>
+<section class="courses">
+    <h3>Our Courses</h3>
     <div class="carousel">
-      <input type="radio" name="carousel" id="carousel1" checked>
-      <input type="radio" name="carousel" id="carousel2">
-      <input type="radio" name="carousel" id="carousel3">
-
-      <div class="carousel-items">
-        <div class="carousel-item">
-          <img src="logo.png" alt="Course 1">
-          <h3>Course 1</h3>
-          <p>Beginner-friendly course to kickstart your learning.</p>
+        <div class="carousel-track">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Course 1">
+                <h4>Course 1</h4>
+                <p>Beginner-friendly course to kickstart your learning.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Course 2">
+                <h4>Course 2</h4>
+                <p>Advance your skills with intermediate programming techniques.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Course 3">
+                <h4>Course 3</h4>
+                <p>Master complex topics and become industry-ready.</p>
+            </div>
         </div>
-        <div class="carousel-item">
-          <img src="logo.png" alt="Course 2">
-          <h3>Course 2</h3>
-          <p>Advance your skills with intermediate techniques.</p>
-        </div>
-        <div class="carousel-item">
-          <img src="logo.png" alt="Course 3">
-          <h3>Course 3</h3>
-          <p>Master the subject with expert-level guidance.</p>
-        </div>
-      </div>
-
-      <div class="carousel-dots">
-        <label for="carousel1"></label>
-        <label for="carousel2"></label>
-        <label for="carousel3"></label>
-      </div>
     </div>
-  </section>
-
-  <section id="testimonials" class="card-section">
-    <h2>What Our Students Say</h2>
-    <div class="testimonial-container">
-      <div class="testimonial">"The courses helped me land my dream job!"<br> - Student A</div>
-      <div class="testimonial">"Instructors are knowledgeable and supportive."<br> - Student B</div>
-      <div class="testimonial">"Flexible learning that fits my busy schedule."<br> - Student C</div>
+    <div class="carousel-buttons">
+        <button id="prev">←</button>
+        <button id="next">→</button>
     </div>
-  </section>
+</section>
 
-  <section id="contact" class="contact-section">
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-      <input type="email" placeholder="Your email">
-      <button type="submit">Send Message</button>
-    </form>
-    <a href="#" class="social-link">Follow us on Social</a>
-  </section>
+<section class="testimonials">
+    <div class="testimonial">"The courses helped me land my dream job!"<br>- Student A</div>
+    <div class="testimonial">"Instructors are knowledgeable and supportive."<br>- Student B</div>
+    <div class="testimonial">"Flexible learning that fits my busy schedule."<br>- Student C</div>
+</section>
 
-  <script src="main.js"></script>
+<section class="contact">
+    <h3>Contact Us</h3>
+    <input type="email" placeholder="Your email">
+    <button>Send Message</button>
+    <a href="#">Follow us on Social</a>
+</section>
+
+<button id="scrollTop">↑</button>
+
+<script src="main.js"></script>
 </body>
 </html>
