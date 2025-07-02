@@ -1,119 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400,600&display=swap');
+
 :root {
-    --bg: #f7fafc;
-    --text: #254441;
-    --accent: #a2eecb;
-    --card-bg: #fff;
+  --bg: #f7fafc;
+  --bg-card: #fff;
+  --bg-accent: #e3fafc;
+  --primary: #254441;
+  --secondary: #49796b;
+  --accent: #b7e4c7;
+  --text-light: #f0f0f0;
+  --dark-bg: #1a1a1a;
+  --dark-card: #333;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--primary);
+  line-height: 1.7;
 }
 
-header {
-    background: var(--card-bg);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
+body.dark-mode {
+  background: var(--dark-bg);
+  color: var(--text-light);
 }
 
-nav a {
-    margin: 0 0.5rem;
-    text-decoration: none;
-    color: var(--text);
+body.dark-mode nav {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+body.dark-mode .cta-btn,
+body.dark-mode .enroll-btn,
+body.dark-mode .social-link {
+  background: #3a3a3a;
+  color: var(--text-light);
+}
+
+body.dark-mode footer {
+  background: var(--dark-card);
+}
+
+body.dark-mode .about,
+body.dark-mode .courses,
+body.dark-mode .testimonials,
+body.dark-mode .contact {
+  background: var(--dark-card);
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+nav {
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 2px 10px rgba(60,110,113,0.03);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 2px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+.nav-links a:hover {
+  color: var(--secondary);
+  border-bottom: 2px solid var(--accent);
 }
 
 .hero {
-    background: var(--accent);
-    text-align: center;
-    padding: 4rem 2rem;
+  background: linear-gradient(120deg, var(--accent) 0%, #b5ead7 100%);
+  padding: 90px 0 60px 0;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  margin-bottom: 28px;
+}
+.cta-btn {
+  background: var(--secondary);
+  color: #fff;
+  padding: 16px 50px;
+  border-radius: 28px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.2s;
+}
+.cta-btn:hover {
+  background: var(--primary);
+  transform: translateY(-2px) scale(1.04);
 }
 
-.hero button {
-    background: var(--text);
-    color: #fff;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 2rem;
-    cursor: pointer;
-    font-weight: bold;
+.about, .courses, .testimonials, .contact {
+  background: var(--bg-card);
+  margin: 48px 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(60,110,113,0.07);
+  padding: 38px 0;
+  text-align: center;
 }
 
-.about {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
 }
 
-.courses {
-    text-align: center;
-    padding: 2rem;
-    background: #d8f9fb;
+.about-img {
+  width: 220px;
+  border-radius: 16px;
+  box-shadow: 0 2px 14px rgba(60,110,113,0.10);
 }
 
-.carousel {
-    overflow: hidden;
-    max-width: 300px;
-    margin: 1rem auto;
+.courses .carousel {
+  overflow: hidden;
+  max-width: 340px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
-.card {
-    min-width: 300px;
-    background: var(--card-bg);
-    margin: 0 0.5rem;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
+.carousel-item {
+  min-width: 100%;
+  padding: 28px 12px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-card);
+  border-radius: 16px;
+  box-shadow: 0 2px 14px rgba(60,110,113,0.08);
 }
 
+.carousel-buttons {
+  margin-top: 12px;
+}
 .carousel-buttons button {
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+  margin: 0 6px;
+  padding: 8px 12px;
+  cursor: pointer;
 }
 
-.testimonials {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    padding: 2rem;
-    background: var(--accent);
+.testimonial-list {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .testimonial {
-    background: var(--card-bg);
-    padding: 1rem;
-    border-radius: 10px;
+  background: var(--bg-accent);
+  border-radius: 14px;
+  padding: 24px 20px;
+  max-width: 290px;
+  font-style: italic;
+  flex: 1 1 220px;
 }
 
-.contact {
-    background: #d8f9fb;
-    text-align: center;
-    padding: 2rem;
+.email-input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 12px 0;
+  width: 70%;
+  max-width: 300px;
 }
 
-#scrollTop {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    padding: 0.5rem;
-    cursor: pointer;
-}
-
-.dark-mode {
-    --bg: #121212;
-    --text: #f0f0f0;
-    --accent: #4a7c59;
-    --card-bg: #1e1e1e;
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--secondary);
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
