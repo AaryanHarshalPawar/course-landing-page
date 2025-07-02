@@ -1,137 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aaryan Pawar | Online Courses</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="main.js"></script>
 </head>
 <body>
-  <!-- Navigation -->
+
+  <!-- Navbar -->
   <nav>
-    <div class="container nav-container">
-      <div class="logo">Aaryan Pawar</div>
+    <div class="nav-container container">
+      <div class="logo">MyBrand</div>
       <ul class="nav-links">
-        <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#courses">Courses</a></li>
+        <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="container hero-content">
-      <h1>Find Deep Relaxation with Yoga Nidra</h1>
-      <p>Let go of stress and reconnect with your inner calm through guided Yoga Nidra sessions designed for all levels.</p>
+  <section id="hero" class="hero">
+    <div class="hero-content container">
+      <h1>Welcome to Our Learning Platform</h1>
+      <p>Empower yourself with top-notch courses and expert instructors.</p>
       <a href="#courses" class="cta-btn">Explore Courses</a>
     </div>
   </section>
 
   <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container about-container">
-      <img src="profile.jpg" alt="Aaryan Pawar" class="about-img">
-      <div class="about-text">
-        <h2 class="centered">Meet Aaryan Pawar</h2>
-        <p>I'm passionate about simplifying learning. Through these courses and my YouTube channel, I help people like you grow their skills without overwhelm.</p>
-        <a href="https://youtube.com/@yourchannel" target="_blank" class="cta-btn">Visit YouTube</a>
-      </div>
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Yoga Nidra" class="about-img large-img">
+  <section id="about" class="about container">
+    <div class="about-container">
+      <img src="logo.png" alt="About Us" class="about-img" />
       <div>
-        <h2 class="centered">About Yoga Nidra</h2>
-        <p>Yoga Nidra is a powerful relaxation technique that guides you into a state of deep rest and renewal. Our courses are crafted to help you relieve stress, improve sleep, and find lasting peace in mind and body.</p>
+        <h2>About Us</h2>
+        <p>We provide quality education to help you achieve your goals.</p>
       </div>
     </div>
   </section>
 
-  <!-- Courses Section (Carousel) -->
-  <section class="courses" id="courses">
-    <div class="container">
-      <h2>Our Courses</h2>
-      <div class="carousel">
-        <input type="radio" name="carousel" id="carousel1" checked>
-        <input type="radio" name="carousel" id="carousel2">
-        <input type="radio" name="carousel" id="carousel3">
-        <div class="carousel-items">
-          <div class="carousel-item" id="item1">
-            <img src="course1.jpg" alt="Yoga Nidra Guide">
-            <h3>Yoga Nidra Guide</h3>
-            <p>Experience deep relaxation and mindfulness with guided sessions.</p>
-            <a href="#" class="enroll-btn">Buy Now</a>
-          </div>
-          <div class="carousel-item" id="item2">
-            <img src="course2.jpg" alt="Self Growth Masterclass">
-            <h3>Self Growth Masterclass</h3>
-            <p>Unlock your potential and cultivate better habits for life success.</p>
-            <a href="#" class="enroll-btn">Buy Now</a>
-          </div>
-          <div class="carousel-item" id="item3">
-            <img src="course3.jpg" alt="Focus & Productivity">
-            <h3>Focus & Productivity</h3>
-            <p>Learn proven techniques to boost your focus and achieve your goals.</p>
-            <a href="#" class="enroll-btn">Buy Now</a>
-          </div>
+  <!-- Courses Section -->
+  <section id="courses" class="courses container">
+    <h2>Our Courses</h2>
+    <div class="carousel">
+      <!-- Radio inputs for carousel -->
+      <input type="radio" name="carousel" id="carousel1" checked />
+      <input type="radio" name="carousel" id="carousel2" />
+      <input type="radio" name="carousel" id="carousel3" />
+
+      <!-- Carousel items -->
+      <div class="carousel-items">
+        <div class="carousel-item" id="item1">
+          <img src="logo.png" alt="Course 1" />
+          <h3>Course 1</h3>
+          <p>Learn the basics of coding with this beginner-friendly course.</p>
+          <button class="enroll-btn">Enroll Now</button>
         </div>
-        <div class="carousel-controls">
-          <label for="carousel1"></label>
-          <label for="carousel2"></label>
-          <label for="carousel3"></label>
+        <div class="carousel-item" id="item2">
+          <img src="logo.png" alt="Course 2" />
+          <h3>Course 2</h3>
+          <p>Advance your skills with intermediate programming techniques.</p>
+          <button class="enroll-btn">Enroll Now</button>
         </div>
+        <div class="carousel-item" id="item3">
+          <img src="logo.png" alt="Course 3" />
+          <h3>Course 3</h3>
+          <p>Master expert level development and software architecture.</p>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <div class="carousel-controls">
+        <label for="carousel1"></label>
+        <label for="carousel2"></label>
+        <label for="carousel3"></label>
       </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <h2>What Our Students Say</h2>
-      <div class="testimonial-list">
-        <div class="testimonial">
-          <p>"The Yoga Nidra course was a game-changer for my stress levels. Highly recommended!"</p>
-          <span>- Priya S.</span>
-        </div>
-        <div class="testimonial">
-          <p>"Aaryan explains concepts so clearly, I finally feel confident with my productivity."</p>
-          <span>- Rahul M.</span>
-        </div>
-        <div class="testimonial">
-          <p>"Beautifully explained and very calming. Highly recommend to anyone seeking inner peace."</p>
-          <span>- Ananya M.</span>
-        </div>
+  <section id="testimonials" class="testimonials container">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial-list">
+      <div class="testimonial">
+        <p>"The courses helped me land my dream job!"</p>
+        <span>- Student A</span>
+      </div>
+      <div class="testimonial">
+        <p>"Instructors are knowledgeable and supportive."</p>
+        <span>- Student B</span>
+      </div>
+      <div class="testimonial">
+        <p>"Flexible learning that fits my busy schedule."</p>
+        <span>- Student C</span>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="container contact-container">
-      <h2>Contact & Social</h2>
-      <form id="contactForm">
-        <input type="email" placeholder="Your Email" required>
-        <button type="submit" class="cta-btn">Send Message</button>
-      </form>
-      <p>Have questions? Email <a href="mailto:youremail@example.com">youremail@example.com</a> or connect via social:</p>
-      <a href="https://youtube.com/@yourchannel" target="_blank" class="social-link">YouTube</a>
-    </div>
+  <section id="contact" class="contact container">
+    <h2>Contact Us</h2>
+    <form id="contactForm" action="#" method="POST">
+      <input type="email" name="email" placeholder="Your email" required />
+      <button type="submit" class="cta-btn">Send Message</button>
+    </form>
+    <a href="#" class="social-link">Follow us on Social</a>
   </section>
-
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTopBtn">↑</button>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Aaryan Pawar | All rights reserved</p>
-    </div>
+    &copy; 2025 MyBrand. All rights reserved.
   </footer>
 
-  <!-- Dark Mode Toggle -->
-  <button id="darkModeToggle">🌙</button>
-
-  <script src="main.js"></script>
 </body>
 </html>
