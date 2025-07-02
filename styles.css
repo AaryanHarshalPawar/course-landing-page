@@ -129,10 +129,9 @@ nav {
 .about-container {
   display: flex;
   align-items: center;
+  justify-content: center;  /* Center the flex items horizontally */
   gap: 36px;
   flex-wrap: wrap;
-  justify-content: center; /* Added for centering */
-  text-align: center; /* Added for text centering */
 }
 .about-img {
   width: 220px;
@@ -144,26 +143,9 @@ nav {
   margin-top: 0;
   color: #49796b;
 }
-
-/* Center text & layout inside about */
-.about-container > div {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .about-text {
-  text-align: center;
-}
-
-.centered {
-  text-align: center;
-}
-
-/* Optional: center the large image */
-.large-img {
-  display: block;
-  margin: 0 auto;
+  text-align: center;  /* Center text inside about-text */
+  flex: 1;             /* Let it grow to fill space */
 }
 
 /* Courses Section & Carousel */
@@ -178,6 +160,12 @@ nav {
 .courses h2 {
   color: #49796b;
   margin-bottom: 28px;
+}
+.courses .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center the container content */
+  justify-content: center;
 }
 
 /* Simple CSS Carousel */
@@ -287,7 +275,7 @@ nav {
 .testimonial-list {
   display: flex;
   gap: 36px;
-  justify-content: center;
+  justify-content: center; /* Already centered */
   flex-wrap: wrap;
   margin-top: 24px;
 }
@@ -327,11 +315,59 @@ nav {
   display: inline-block;
   background: #b7e4c7;
   color: #254441;
+  margin: 0 12px;
+  padding: 12px 20px;
   border-radius: 22px;
-  padding: 10px 28px;
-  margin-top: 10px;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
   font-weight: 600;
+  box-shadow: 0 2px 8px rgba(60,110,113,0.06);
+  transition: background 0.2s;
 }
-.social-link
+.social-link:hover {
+  background: #49796b;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #254441;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #49796b;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 100;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-text {
+    text-align: center;
+  }
+  
+  .testimonial-list {
+    flex-direction: column;
+  }
+  
+  .carousel {
+    max-width: 100%;
+  }
+}
