@@ -1,3 +1,4 @@
+html:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,29 +49,38 @@
   <section id="courses" class="courses container">
     <h2>Our Courses</h2>
     <div class="carousel">
-      <div class="carousel-track">
-        <div class="carousel-item">
+      <!-- Radio inputs for carousel -->
+      <input type="radio" name="carousel" id="carousel1" checked />
+      <input type="radio" name="carousel" id="carousel2" />
+      <input type="radio" name="carousel" id="carousel3" />
+
+      <!-- Carousel items -->
+      <div class="carousel-items">
+        <div class="carousel-item" id="item1">
           <img src="logo.png" alt="Course 1" />
           <h3>Course 1</h3>
           <p>Learn the basics of coding with this beginner-friendly course.</p>
           <button class="enroll-btn">Enroll Now</button>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" id="item2">
           <img src="logo.png" alt="Course 2" />
           <h3>Course 2</h3>
           <p>Advance your skills with intermediate programming techniques.</p>
           <button class="enroll-btn">Enroll Now</button>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" id="item3">
           <img src="logo.png" alt="Course 3" />
           <h3>Course 3</h3>
           <p>Master expert level development and software architecture.</p>
           <button class="enroll-btn">Enroll Now</button>
         </div>
       </div>
-      <div class="carousel-buttons">
-        <button id="prevBtn">←</button>
-        <button id="nextBtn">→</button>
+
+      <!-- Carousel Controls -->
+      <div class="carousel-controls">
+        <label for="carousel1"></label>
+        <label for="carousel2"></label>
+        <label for="carousel3"></label>
       </div>
     </div>
   </section>
@@ -98,7 +108,7 @@
   <section id="contact" class="contact container">
     <h2>Contact Us</h2>
     <form id="contactForm" action="#" method="POST">
-      <input type="email" name="email" placeholder="Your email" required class="email-input"/>
+      <input type="email" name="email" placeholder="Your email" required />
       <button type="submit" class="cta-btn">Send Message</button>
     </form>
     <a href="#" class="social-link">Follow us on Social</a>
