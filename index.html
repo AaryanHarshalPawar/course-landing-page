@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Website</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Platform</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <!-- Skip to content link for accessibility -->
   <a href="#main" class="skip-link">Skip to content</a>
 
   <!-- Navbar -->
   <nav>
     <div class="nav-container container">
-      <div class="logo">MyBrand</div>
+      <div class="logo">LearnHub</div>
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -32,100 +30,104 @@
     <section id="hero" class="hero">
       <div class="hero-content container">
         <h1>Welcome to Our Learning Platform</h1>
-        <p>Empower yourself with top-notch courses and expert instructors.</p>
+        <p>Empower yourself with top-notch courses and expert instructors. Start your journey to success today.</p>
         <a href="#courses" class="cta-btn">Explore Courses</a>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about container">
-      <div class="about-container">
-        <img src="logo.png" alt="About Us" class="about-img" />
-        <div class="about-text">
-          <h2>About Us</h2>
-          <p>We provide quality education to help you achieve your goals.</p>
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-container">
+          <div class="about-img">🎓</div>
+          <div class="about-text">
+            <h2>About Us</h2>
+            <p>We provide quality education to help you achieve your goals. Our platform offers a wide range of courses taught by industry experts with years of experience.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Courses Section -->
-    <section id="courses" class="courses container">
-      <h2>Our Courses</h2>
-      <div class="carousel">
-        <!-- Radio inputs for carousel -->
-        <input type="radio" name="carousel" id="carousel1" checked />
-        <input type="radio" name="carousel" id="carousel2" />
-        <input type="radio" name="carousel" id="carousel3" />
-
-        <!-- Carousel items -->
-        <div class="carousel-items">
-          <div class="carousel-item" id="item1">
-            <img src="logo.png" alt="Course 1" />
-            <h3>Course 1</h3>
-            <p>Learn the basics of coding with this beginner-friendly course.</p>
+    <section id="courses" class="courses">
+      <div class="container">
+        <h2>Our Courses</h2>
+        <div class="courses-container">
+          <div class="course-card">
+            <div class="course-icon">💻</div>
+            <h3>Web Development</h3>
+            <p>Learn the basics of coding with this beginner-friendly course. Build responsive websites from scratch.</p>
             <button class="enroll-btn">Enroll Now</button>
           </div>
-          <div class="carousel-item" id="item2">
-            <img src="logo.png" alt="Course 2" />
-            <h3>Course 2</h3>
-            <p>Advance your skills with intermediate programming techniques.</p>
+          
+          <div class="course-card">
+            <div class="course-icon">📱</div>
+            <h3>Mobile App Development</h3>
+            <p>Advance your skills with intermediate programming techniques. Create cross-platform mobile applications.</p>
             <button class="enroll-btn">Enroll Now</button>
           </div>
-          <div class="carousel-item" id="item3">
-            <img src="logo.png" alt="Course 3" />
-            <h3>Course 3</h3>
-            <p>Master expert level development and software architecture.</p>
+          
+          <div class="course-card">
+            <div class="course-icon">📊</div>
+            <h3>Data Science</h3>
+            <p>Master expert level development and software architecture. Analyze and visualize complex datasets.</p>
             <button class="enroll-btn">Enroll Now</button>
           </div>
         </div>
-
-        <!-- Carousel Controls -->
-        <div class="carousel-controls">
-          <label for="carousel1"></label>
-          <label for="carousel2"></label>
-          <label for="carousel3"></label>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <button class="carousel-nav prev" aria-label="Previous course">❮</button>
-        <button class="carousel-nav next" aria-label="Next course">❯</button>
       </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials container">
-      <h2>What Our Students Say</h2>
-      <div class="testimonial-list">
-        <div class="testimonial">
-          <p>"The courses helped me land my dream job!"</p>
-          <span>- Student A</span>
-        </div>
-        <div class="testimonial">
-          <p>"Instructors are knowledgeable and supportive."</p>
-          <span>- Student B</span>
-        </div>
-        <div class="testimonial">
-          <p>"Flexible learning that fits my busy schedule."</p>
-          <span>- Student C</span>
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-list">
+          <div class="testimonial">
+            <p>The courses helped me land my dream job! The instructors were knowledgeable and the content was relevant to industry needs.</p>
+            <span>- Sarah Johnson</span>
+          </div>
+          
+          <div class="testimonial">
+            <p>Instructors are knowledgeable and supportive. They provided personalized feedback that helped me improve my skills.</p>
+            <span>- Michael Chen</span>
+          </div>
+          
+          <div class="testimonial">
+            <p>Flexible learning that fits my busy schedule. I was able to complete the course while working full-time.</p>
+            <span>- Emily Rodriguez</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact container">
-      <h2>Contact Us</h2>
-      <form id="contactForm" action="#" method="POST">
-        <input type="email" name="email" placeholder="Your email" required />
-        <button type="submit" class="cta-btn">Send Message</button>
-      </form>
-      <a href="#" class="social-link">Follow us on Social</a>
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm" class="contact-form">
+          <input type="email" name="email" placeholder="Your email" required>
+          <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Twitter">t</a>
+          <a href="#" class="social-link" aria-label="Instagram">i</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 MyBrand. All rights reserved.
+    <div class="container">
+      &copy; 2025 LearnHub. All rights reserved.
+    </div>
   </footer>
 
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" aria-label="Scroll to top">↑</button>
+
+  <script src="main.js"></script>
 </body>
 </html>
