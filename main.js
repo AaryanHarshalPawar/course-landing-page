@@ -7,9 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
       
       if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+        // Calculate the position to scroll to
+        const headerHeight = document.querySelector('nav').offsetHeight;
+        const targetPosition = targetElement.offsetTop - headerHeight;
+        
+        // Smooth scroll to the target position
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
         });
         
         // Update URL without page jump
@@ -41,80 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Enhanced Carousel with Auto-Advance
-  const carousel = document.querySelector('.carousel');
-  if (carousel) {
-    const radioButtons = carousel.querySelectorAll('input[type="radio"]');
-    const items = carousel.querySelectorAll('.carousel-item');
-    const prevBtn = carousel.querySelector('.prev');
-    const nextBtn = carousel.querySelector('.next');
-    let currentIndex = 0;
-    let autoAdvanceInterval;
-
-    function showSlide(index) {
-      // Ensure index is within bounds
-      index = (index + radioButtons.length) % radioButtons.length;
-      radioButtons[index].checked = true;
-      currentIndex = index;
-    }
-
-    function startAutoAdvance() {
-      autoAdvanceInterval = setInterval(() => {
-        showSlide(currentIndex + 1);
-      }, 5000);
-    }
-
-    function stopAutoAdvance() {
-      clearInterval(autoAdvanceInterval);
-    }
-
-    // Manual navigation
-    if (nextBtn && prevBtn) {
-      nextBtn.addEventListener('click', () => {
-        showSlide(currentIndex + 1);
-        stopAutoAdvance();
-        startAutoAdvance();
-      });
-
-      prevBtn.addEventListener('click', () => {
-        showSlide(currentIndex - 1);
-        stopAutoAdvance();
-        startAutoAdvance();
-      });
-    }
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      if (document.activeElement.closest('.carousel')) {
-        if (e.key === 'ArrowRight') {
-          showSlide(currentIndex + 1);
-          stopAutoAdvance();
-          startAutoAdvance();
-        } else if (e.key === 'ArrowLeft') {
-          showSlide(currentIndex - 1);
-          stopAutoAdvance();
-          startAutoAdvance();
-        }
-      }
-    });
-
-    // Start auto-advance
-    startAutoAdvance();
-
-    // Pause on hover
-    carousel.addEventListener('mouseenter', stopAutoAdvance);
-    carousel.addEventListener('mouseleave', startAutoAdvance);
-  }
-
   // Scroll-to-top Button
-  const scrollBtn = document.createElement('button');
-  scrollBtn.id = 'scrollToTopBtn';
-  scrollBtn.innerHTML = '&uarr;';
-  scrollBtn.setAttribute('aria-label', 'Scroll to top');
-  document.body.appendChild(scrollBtn);
-
+  const scrollBtn = document.getElementById('scrollToTopBtn');
+  
   function toggleScrollButton() {
-    scrollBtn.style.display = window.scrollY > 100 ? 'block' : 'none';
+    scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
   }
 
   window.addEventListener('scroll', toggleScrollButton);
@@ -145,20 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       
       // In a real app, you would send this to a server
-      console.log('Form submitted with email:', email);
       alert('Thank you for your message! We\'ll be in touch soon.');
       contactForm.reset();
     });
   }
-
-  // Focus styles for keyboard navigation
-  document.addEventListener('keyup', (e) => {
-    if (e.key === 'Tab') {
-      document.documentElement.classList.add('keyboard-nav');
-    }
-  });
-
-  document.addEventListener('mousedown', () => {
-    document.documentElement.classList.remove('keyboard-nav');
-  });
 });
