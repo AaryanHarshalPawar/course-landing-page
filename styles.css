@@ -165,7 +165,7 @@ nav {
 /* Hero Section */
 .hero {
   background: linear-gradient(120deg, var(--secondary-color) 0%, #b5ead7 100%);
-  min-height: 100vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
